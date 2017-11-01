@@ -10,12 +10,12 @@ block content
     br
     b.text-primary Quantity:
       b.text-success {{qty}}
-    input.form-group.form-control(type="text" min="0" ng-model="qty" required)
+    input.form-group.form-control(type="number" min="0" ng-model="qty" required)
     br
     br
     b.text-primary Cost:
       b.text-success {{cost}}
-    input.form-group.form-control(type="text" min="0" ng-model="cost" required)
+    input.form-group.form-control(type="number" min="0" ng-model="cost" required)
     br
     br
     b.text-primary Currency:
