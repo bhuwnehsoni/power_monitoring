@@ -27,7 +27,8 @@ block content
     b.text-primary Total:
     span(ng-repeat="ct in currencies")
       br
-      b.text-success &nbsp; {{total(ct) | currency:ct}}
+      b.text-success
+        total-directive
     br
     br
     input.btn.btn-primary(type="button" ng-click="pay()" value="PAY IT")

@@ -10,7 +10,7 @@ var app = angular.module("invoiceApp", [])
             CNY: 6.09
         };
         $scope.pay = function(){
-            alert('Your Payment Has been Done Successfully...');
+            alert('Payment Has been Made Successfully...');
         };
         $scope.convertCurrency = function(amount, inCurr, outCurr) {
             return amount * $scope.usdToForeignRates[outCurr] / $scope.usdToForeignRates[inCurr];
@@ -20,4 +20,10 @@ var app = angular.module("invoiceApp", [])
         };
         //console.log($scope);
         //$scope.pay();
+    });
+    app.directive("totalDirective", function() {
+        return {
+            //template : "{{total(ct) | currency:ct}}"
+              template : "<span class='text-danger'>{{ct}} :</span> {{total(ct)}}"
+        };
     });
